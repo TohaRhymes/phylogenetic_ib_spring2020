@@ -1,0 +1,605 @@
+   Executing file "input.nexus.compute"
+   UNIX line termination
+   Longest line length = 2472
+   Parsing file
+   Expecting NEXUS formatted file
+   Reading data block
+      Allocated taxon set
+      Allocated matrix
+      Defining new matrix with 10 taxa and 2460 characters
+      Data is Dna
+      Data matrix is not interleaved
+      Gaps coded as -
+      Taxon  1 -> SUP35_Kla
+      Taxon  2 -> SUP35_Agos
+      Taxon  3 -> SUP35_Sc__
+      Taxon  4 -> SUP35_Sbou
+      Taxon  5 -> SUP35_Sc
+      Taxon  6 -> SUP35_Spar
+      Taxon  7 -> SUP35_Smik
+      Taxon  8 -> SUP35_Sarb
+      Taxon  9 -> SUP35_Skud
+      Taxon 10 -> SUP35_Seub
+      Successfully read matrix
+      Setting default partition (does not divide up characters)
+      Setting model defaults
+      Seed (for generating default start values) = 1584736373
+      Setting output file names to "input.nexus.compute.run<i>.<p|t>"
+   Exiting data block
+   Reading mrbayes block
+      Setting autoclose to yes
+      Setting nowarnings to yes
+      Setting Nst to 6
+      Setting Rates to Invgamma
+      Setting Nucmodel to 4by4
+      Set state frequency prior to default
+      Successfully set likelihood model parameters
+      Setting number of generations to 100000
+      Setting sample frequency to 100
+      Running Markov chain
+      MCMC stamp = 7275474137
+      Seed = 1172599256
+      Swapseed = 1584736373
+      Model settings:
+
+         Data not partitioned --
+            Datatype  = DNA
+            Nucmodel  = 4by4
+            Nst       = 6
+                        Substitution rates, expressed as proportions
+                        of the rate sum, have a Dirichlet prior
+                        (1.00,1.00,1.00,1.00,1.00,1.00)
+            Covarion  = No
+            # States  = 4
+                        State frequencies have a Dirichlet prior
+                        (1.00,1.00,1.00,1.00)
+            Rates     = Invgamma
+                        The distribution is approximated using 4 categories.
+                        Likelihood summarized over all rate categories in each generation.
+                        Shape parameter is exponentially
+                        distributed with parameter (1.00).
+                        Proportion of invariable sites is uniformly dist-
+                        ributed on the interval (0.00,1.00).
+
+      Active parameters: 
+
+         Parameters
+         ---------------------
+         Revmat              1
+         Statefreq           2
+         Shape               3
+         Pinvar              4
+         Ratemultiplier      5
+         Topology            6
+         Brlens              7
+         ---------------------
+
+         1 --  Parameter  = Revmat
+               Type       = Rates of reversible rate matrix
+               Prior      = Dirichlet(1.00,1.00,1.00,1.00,1.00,1.00)
+
+         2 --  Parameter  = Pi
+               Type       = Stationary state frequencies
+               Prior      = Dirichlet
+
+         3 --  Parameter  = Alpha
+               Type       = Shape of scaled gamma distribution of site rates
+               Prior      = Exponential(1.00)
+
+         4 --  Parameter  = Pinvar
+               Type       = Proportion of invariable sites
+               Prior      = Uniform(0.00,1.00)
+
+         5 --  Parameter  = Ratemultiplier
+               Type       = Partition-specific rate multiplier
+               Prior      = Fixed(1.0)
+
+         6 --  Parameter  = Tau
+               Type       = Topology
+               Prior      = All topologies equally probable a priori
+               Subparam.  = V
+
+         7 --  Parameter  = V
+               Type       = Branch lengths
+               Prior      = Unconstrained:GammaDir(1.0,0.1000,1.0,1.0)
+
+
+
+      The MCMC sampler will use the following moves:
+         With prob.  Chain will use move
+            0.93 %   Dirichlet(Revmat)
+            0.93 %   Slider(Revmat)
+            0.93 %   Dirichlet(Pi)
+            0.93 %   Slider(Pi)
+            1.85 %   Multiplier(Alpha)
+            1.85 %   Slider(Pinvar)
+            9.26 %   ExtSPR(Tau,V)
+            9.26 %   ExtTBR(Tau,V)
+            9.26 %   NNI(Tau,V)
+            9.26 %   ParsSPR(Tau,V)
+           37.04 %   Multiplier(V)
+           12.96 %   Nodeslider(V)
+            5.56 %   TLMultiplier(V)
+
+      Division 1 has 614 unique site patterns
+      Initializing conditional likelihoods
+      Using standard SSE likelihood calculator for division 1 (single-precision)
+      Initializing invariable-site conditional likelihoods
+
+      Initial log likelihoods and log prior probs for run 1:
+         Chain 1 -- -13220.102678 -- 36.653401
+         Chain 2 -- -13377.220097 -- 36.653401
+         Chain 3 -- -13469.754201 -- 36.653401
+         Chain 4 -- -13366.029459 -- 36.653401
+
+      Initial log likelihoods and log prior probs for run 2:
+         Chain 1 -- -13611.447853 -- 36.653401
+         Chain 2 -- -13570.759173 -- 36.653401
+         Chain 3 -- -13510.902243 -- 36.653401
+         Chain 4 -- -12693.085113 -- 36.653401
+
+
+      Using a relative burnin of 25.0 % for diagnostics
+
+      Chain results (100000 generations requested):
+
+          0 -- [-13220.103] (-13377.220) (-13469.754) (-13366.029) * [-13611.448] (-13570.759) (-13510.902) (-12693.085) 
+       1000 -- [-9918.372] (-10033.875) (-9951.421) (-10118.719) * (-10199.226) (-10155.606) [-10143.876] (-10155.326) -- 0:03:18
+       2000 -- [-9856.534] (-9864.114) (-9861.380) (-10064.759) * (-10109.575) (-10068.346) (-10058.915) [-10036.786] -- 0:02:27
+       3000 -- (-9798.889) (-9838.903) [-9795.100] (-9850.713) * (-10036.447) [-9897.648] (-9913.303) (-9948.064) -- 0:02:41
+       4000 -- (-9773.893) (-9812.682) (-9759.472) [-9749.760] * (-9898.335) (-9807.263) [-9760.524] (-9844.998) -- 0:02:24
+       5000 -- (-9762.185) (-9772.727) [-9744.089] (-9746.687) * (-9804.477) (-9752.376) [-9747.702] (-9822.273) -- 0:02:32
+
+      Average standard deviation of split frequencies: 0.027196
+
+       6000 -- [-9747.184] (-9757.148) (-9760.102) (-9740.326) * (-9768.915) (-9747.740) [-9752.678] (-9809.927) -- 0:02:21
+       7000 -- (-9747.299) (-9751.488) (-9752.628) [-9741.457] * [-9750.627] (-9747.992) (-9744.514) (-9785.815) -- 0:02:12
+       8000 -- (-9752.154) (-9759.272) [-9742.502] (-9745.011) * (-9754.815) [-9740.673] (-9740.369) (-9767.335) -- 0:02:18
+       9000 -- [-9747.194] (-9743.788) (-9743.198) (-9750.543) * [-9749.424] (-9754.722) (-9744.495) (-9769.766) -- 0:02:11
+      10000 -- (-9755.643) (-9745.152) [-9740.735] (-9746.916) * (-9755.616) [-9746.886] (-9745.280) (-9747.416) -- 0:02:15
+
+      Average standard deviation of split frequencies: 0.042644
+
+      11000 -- [-9744.267] (-9749.556) (-9747.875) (-9745.772) * (-9755.192) (-9749.237) [-9745.908] (-9744.296) -- 0:02:09
+      12000 -- (-9757.600) (-9744.714) (-9742.375) [-9748.449] * (-9746.396) [-9747.547] (-9747.731) (-9751.141) -- 0:02:12
+      13000 -- [-9744.860] (-9743.258) (-9751.229) (-9746.071) * [-9746.685] (-9748.312) (-9742.786) (-9742.155) -- 0:02:07
+      14000 -- (-9748.319) (-9749.836) (-9745.396) [-9736.951] * (-9752.551) [-9745.863] (-9739.161) (-9746.794) -- 0:02:02
+      15000 -- (-9739.722) (-9756.402) (-9750.235) [-9746.907] * (-9745.042) [-9743.961] (-9746.947) (-9747.488) -- 0:02:04
+
+      Average standard deviation of split frequencies: 0.038250
+
+      16000 -- (-9738.138) (-9746.525) [-9744.321] (-9748.132) * [-9754.906] (-9744.963) (-9744.647) (-9743.497) -- 0:02:00
+      17000 -- (-9749.003) [-9739.374] (-9741.303) (-9745.870) * (-9747.556) (-9743.712) [-9742.397] (-9747.496) -- 0:02:02
+      18000 -- (-9745.622) (-9743.970) [-9742.502] (-9749.844) * [-9747.801] (-9746.048) (-9750.125) (-9744.445) -- 0:01:58
+      19000 -- (-9750.547) (-9752.646) [-9743.962] (-9747.353) * (-9745.327) [-9743.527] (-9748.613) (-9750.477) -- 0:01:59
+      20000 -- (-9745.483) (-9755.469) [-9738.264] (-9745.000) * (-9748.830) (-9747.936) [-9743.504] (-9748.094) -- 0:01:55
+
+      Average standard deviation of split frequencies: 0.024975
+
+      21000 -- (-9746.567) (-9753.681) [-9742.214] (-9743.616) * (-9742.317) (-9745.050) [-9747.175] (-9759.407) -- 0:01:52
+      22000 -- (-9745.247) (-9740.063) (-9743.379) [-9753.627] * [-9741.259] (-9750.536) (-9751.018) (-9753.547) -- 0:01:53
+      23000 -- (-9755.887) (-9749.356) (-9748.198) [-9740.494] * (-9745.439) (-9753.393) (-9740.769) [-9744.199] -- 0:01:50
+      24000 -- (-9751.412) (-9741.600) [-9742.340] (-9748.100) * [-9740.447] (-9750.002) (-9751.488) (-9752.927) -- 0:01:50
+      25000 -- (-9747.313) (-9742.179) (-9741.950) [-9746.687] * (-9746.210) (-9763.329) [-9746.538] (-9741.365) -- 0:01:48
+
+      Average standard deviation of split frequencies: 0.015901
+
+      26000 -- (-9749.743) (-9741.233) (-9742.943) [-9743.187] * (-9745.228) (-9740.535) (-9743.657) [-9741.907] -- 0:01:45
+      27000 -- (-9745.347) (-9740.389) (-9754.572) [-9740.609] * (-9747.435) [-9743.558] (-9744.656) (-9746.561) -- 0:01:45
+      28000 -- (-9745.249) (-9745.789) (-9747.432) [-9742.130] * (-9744.777) (-9744.047) [-9738.284] (-9761.628) -- 0:01:42
+      29000 -- (-9747.534) [-9737.976] (-9749.022) (-9748.826) * [-9743.401] (-9741.460) (-9748.551) (-9746.563) -- 0:01:42
+      30000 -- [-9740.976] (-9742.818) (-9740.057) (-9756.820) * [-9739.340] (-9748.243) (-9747.759) (-9749.072) -- 0:01:40
+
+      Average standard deviation of split frequencies: 0.016165
+
+      31000 -- (-9746.835) (-9742.492) (-9743.676) [-9745.783] * [-9742.564] (-9751.814) (-9748.331) (-9746.847) -- 0:01:37
+      32000 -- [-9749.153] (-9747.466) (-9745.737) (-9753.646) * [-9744.016] (-9749.166) (-9748.816) (-9741.347) -- 0:01:37
+      33000 -- (-9742.949) (-9743.433) (-9745.617) [-9747.147] * (-9743.106) (-9753.084) (-9755.344) [-9738.718] -- 0:01:35
+      34000 -- (-9757.648) (-9740.829) [-9741.417] (-9749.188) * (-9745.990) [-9745.604] (-9750.296) (-9750.318) -- 0:01:35
+      35000 -- (-9743.473) (-9745.300) (-9747.615) [-9750.313] * (-9754.217) [-9745.824] (-9745.938) (-9742.053) -- 0:01:32
+
+      Average standard deviation of split frequencies: 0.015401
+
+      36000 -- (-9747.765) [-9740.133] (-9748.212) (-9749.687) * (-9753.552) (-9744.917) [-9750.288] (-9747.845) -- 0:01:32
+      37000 -- (-9749.665) (-9747.545) (-9748.121) [-9745.797] * (-9744.171) [-9738.298] (-9745.569) (-9747.545) -- 0:01:30
+      38000 -- (-9746.715) (-9753.261) [-9743.670] (-9748.500) * (-9752.687) (-9762.912) [-9742.888] (-9740.795) -- 0:01:29
+      39000 -- (-9759.827) (-9749.960) [-9745.985] (-9741.020) * (-9748.972) (-9746.934) [-9745.787] (-9748.145) -- 0:01:27
+      40000 -- (-9747.195) [-9749.018] (-9746.014) (-9741.885) * (-9742.671) (-9753.483) (-9747.699) [-9751.736] -- 0:01:25
+
+      Average standard deviation of split frequencies: 0.014878
+
+      41000 -- (-9757.577) (-9749.450) (-9745.311) [-9739.950] * [-9743.668] (-9746.981) (-9749.387) (-9748.014) -- 0:01:24
+      42000 -- [-9749.617] (-9746.325) (-9752.685) (-9741.530) * [-9742.034] (-9742.996) (-9750.592) (-9742.772) -- 0:01:22
+      43000 -- (-9757.049) (-9748.020) [-9746.258] (-9744.520) * (-9755.197) [-9740.379] (-9747.330) (-9746.963) -- 0:01:22
+      44000 -- (-9743.985) (-9748.152) (-9742.030) [-9744.119] * (-9741.842) (-9738.334) (-9744.164) [-9751.831] -- 0:01:20
+      45000 -- (-9750.009) (-9746.218) (-9742.690) [-9743.282] * (-9741.380) (-9746.544) [-9743.332] (-9746.536) -- 0:01:19
+
+      Average standard deviation of split frequencies: 0.013906
+
+      46000 -- (-9753.265) (-9741.518) (-9749.187) [-9740.767] * (-9748.087) [-9749.345] (-9756.273) (-9749.367) -- 0:01:17
+      47000 -- [-9742.123] (-9745.249) (-9753.201) (-9745.750) * [-9747.043] (-9754.719) (-9752.198) (-9747.725) -- 0:01:16
+      48000 -- (-9744.187) [-9743.174] (-9748.627) (-9738.390) * (-9739.841) (-9748.788) (-9747.016) [-9742.006] -- 0:01:14
+      49000 -- [-9749.762] (-9741.961) (-9744.096) (-9749.181) * [-9745.165] (-9745.639) (-9740.902) (-9742.086) -- 0:01:13
+      50000 -- (-9746.765) (-9751.268) (-9746.415) [-9747.293] * [-9750.520] (-9742.867) (-9755.034) (-9744.727) -- 0:01:12
+
+      Average standard deviation of split frequencies: 0.012694
+
+      51000 -- (-9749.589) (-9743.903) [-9746.681] (-9739.693) * (-9749.756) [-9741.835] (-9750.080) (-9753.333) -- 0:01:10
+      52000 -- (-9749.828) (-9752.792) (-9747.690) [-9746.709] * [-9738.839] (-9740.026) (-9742.986) (-9747.611) -- 0:01:09
+      53000 -- (-9749.218) (-9745.074) [-9744.959] (-9749.201) * [-9743.624] (-9747.718) (-9750.711) (-9743.058) -- 0:01:07
+      54000 -- (-9742.945) (-9746.553) [-9744.284] (-9745.038) * (-9747.713) (-9745.760) (-9755.686) [-9742.776] -- 0:01:06
+      55000 -- [-9738.617] (-9744.151) (-9747.852) (-9742.951) * (-9739.072) (-9746.830) (-9750.891) [-9742.246] -- 0:01:04
+
+      Average standard deviation of split frequencies: 0.011671
+
+      56000 -- [-9747.956] (-9748.396) (-9746.139) (-9746.697) * (-9748.732) (-9743.837) [-9744.630] (-9744.547) -- 0:01:03
+      57000 -- (-9751.997) (-9749.554) (-9743.797) [-9744.695] * (-9743.153) [-9741.497] (-9748.213) (-9749.045) -- 0:01:01
+      58000 -- [-9746.406] (-9746.024) (-9741.062) (-9746.633) * [-9739.523] (-9751.674) (-9756.149) (-9747.898) -- 0:01:00
+      59000 -- [-9755.786] (-9739.683) (-9746.601) (-9743.339) * [-9749.953] (-9751.356) (-9756.091) (-9749.217) -- 0:00:59
+      60000 -- (-9747.604) (-9746.939) [-9739.570] (-9749.041) * (-9743.526) (-9743.119) (-9744.796) [-9747.288] -- 0:00:57
+
+      Average standard deviation of split frequencies: 0.009668
+
+      61000 -- [-9741.610] (-9744.822) (-9749.854) (-9756.196) * (-9748.174) [-9749.467] (-9749.642) (-9751.677) -- 0:00:56
+      62000 -- [-9739.789] (-9742.280) (-9747.842) (-9757.875) * (-9747.795) (-9753.225) [-9742.025] (-9752.772) -- 0:00:54
+      63000 -- [-9747.179] (-9756.404) (-9750.073) (-9750.729) * [-9748.191] (-9748.425) (-9750.997) (-9741.684) -- 0:00:53
+      64000 -- (-9757.649) (-9747.061) [-9746.709] (-9747.748) * (-9748.754) [-9747.183] (-9745.214) (-9745.059) -- 0:00:51
+      65000 -- (-9752.586) [-9748.814] (-9747.950) (-9743.264) * (-9749.634) (-9755.585) [-9744.493] (-9750.387) -- 0:00:50
+
+      Average standard deviation of split frequencies: 0.010363
+
+      66000 -- (-9741.616) (-9744.332) (-9750.402) [-9742.466] * (-9747.627) [-9743.800] (-9754.326) (-9743.828) -- 0:00:48
+      67000 -- (-9752.564) (-9745.403) (-9750.116) [-9742.104] * (-9746.067) (-9750.151) (-9749.979) [-9742.293] -- 0:00:47
+      68000 -- (-9743.150) (-9745.459) (-9744.625) [-9749.882] * (-9745.010) [-9748.767] (-9747.909) (-9744.106) -- 0:00:46
+      69000 -- (-9744.922) (-9740.429) (-9746.959) [-9737.055] * (-9752.850) (-9749.719) [-9743.286] (-9751.054) -- 0:00:44
+      70000 -- [-9740.950] (-9749.267) (-9755.588) (-9747.384) * (-9741.682) (-9762.776) [-9745.346] (-9756.189) -- 0:00:43
+
+      Average standard deviation of split frequencies: 0.008850
+
+      71000 -- (-9740.164) (-9744.092) [-9749.327] (-9742.285) * (-9752.333) [-9748.455] (-9744.935) (-9745.413) -- 0:00:41
+      72000 -- [-9746.425] (-9746.386) (-9754.066) (-9747.972) * (-9739.754) (-9760.837) (-9745.350) [-9746.455] -- 0:00:40
+      73000 -- (-9738.701) (-9747.298) (-9750.532) [-9745.134] * (-9745.568) [-9744.080] (-9751.541) (-9744.907) -- 0:00:38
+      74000 -- [-9748.317] (-9748.824) (-9746.175) (-9750.531) * (-9743.406) (-9738.646) [-9746.845] (-9746.697) -- 0:00:37
+      75000 -- [-9741.207] (-9743.544) (-9749.286) (-9757.379) * [-9746.542] (-9747.259) (-9741.632) (-9745.099) -- 0:00:36
+
+      Average standard deviation of split frequencies: 0.006478
+
+      76000 -- [-9743.322] (-9741.726) (-9743.964) (-9742.008) * (-9750.735) [-9745.720] (-9750.624) (-9740.654) -- 0:00:34
+      77000 -- (-9748.051) (-9751.193) (-9750.024) [-9748.971] * [-9745.626] (-9742.847) (-9746.774) (-9744.141) -- 0:00:33
+      78000 -- (-9745.605) (-9751.401) (-9755.455) [-9748.075] * (-9744.887) [-9738.137] (-9744.272) (-9744.630) -- 0:00:31
+      79000 -- (-9744.631) (-9735.258) [-9745.314] (-9742.741) * [-9740.102] (-9747.003) (-9743.173) (-9750.029) -- 0:00:30
+      80000 -- (-9745.969) (-9742.956) [-9749.450] (-9752.414) * (-9745.701) (-9748.668) [-9739.285] (-9750.792) -- 0:00:28
+
+      Average standard deviation of split frequencies: 0.006667
+
+      81000 -- (-9741.001) (-9752.425) [-9745.952] (-9749.645) * (-9749.427) (-9743.906) (-9746.746) [-9752.989] -- 0:00:27
+      82000 -- (-9743.235) (-9737.926) (-9747.869) [-9742.899] * (-9743.503) (-9748.157) [-9754.805] (-9744.998) -- 0:00:25
+      83000 -- (-9747.790) (-9744.815) (-9750.683) [-9747.665] * (-9750.240) (-9746.579) (-9758.035) [-9745.924] -- 0:00:24
+      84000 -- (-9750.371) [-9751.641] (-9746.975) (-9744.039) * [-9743.715] (-9764.073) (-9749.149) (-9744.899) -- 0:00:23
+      85000 -- (-9755.609) (-9751.129) (-9750.125) [-9746.864] * (-9744.195) (-9756.866) [-9745.984] (-9743.881) -- 0:00:21
+
+      Average standard deviation of split frequencies: 0.004057
+
+      86000 -- (-9744.586) (-9743.140) [-9743.024] (-9755.168) * (-9746.852) (-9748.675) (-9747.405) [-9738.924] -- 0:00:20
+      87000 -- (-9739.739) (-9743.794) [-9742.406] (-9750.703) * (-9747.430) (-9744.640) (-9752.535) [-9746.440] -- 0:00:18
+      88000 -- (-9748.890) [-9737.455] (-9753.771) (-9738.402) * (-9747.673) (-9744.393) (-9745.993) [-9746.948] -- 0:00:17
+      89000 -- (-9756.733) [-9744.667] (-9747.822) (-9747.150) * (-9743.868) (-9750.002) [-9748.695] (-9748.614) -- 0:00:15
+      90000 -- (-9753.522) (-9749.134) [-9738.955] (-9755.366) * (-9751.101) (-9742.069) [-9745.503] (-9741.179) -- 0:00:14
+
+      Average standard deviation of split frequencies: 0.005143
+
+      91000 -- (-9748.580) (-9748.546) [-9738.430] (-9748.909) * (-9749.487) [-9741.571] (-9747.816) (-9750.286) -- 0:00:12
+      92000 -- (-9758.248) (-9754.350) [-9746.930] (-9744.350) * [-9748.405] (-9745.481) (-9749.540) (-9745.177) -- 0:00:11
+      93000 -- (-9745.859) (-9745.959) [-9741.868] (-9745.067) * [-9742.837] (-9744.711) (-9749.572) (-9748.832) -- 0:00:10
+      94000 -- (-9746.443) [-9747.863] (-9745.624) (-9746.252) * (-9744.529) (-9753.362) (-9743.251) [-9745.809] -- 0:00:08
+      95000 -- (-9749.345) (-9750.944) [-9748.595] (-9749.987) * (-9748.776) (-9748.072) [-9742.276] (-9744.935) -- 0:00:07
+
+      Average standard deviation of split frequencies: 0.003136
+
+      96000 -- (-9752.130) (-9748.488) [-9741.546] (-9742.763) * (-9741.550) (-9748.693) (-9751.680) [-9744.086] -- 0:00:05
+      97000 -- (-9744.136) (-9750.969) [-9747.837] (-9749.099) * (-9744.501) (-9746.806) (-9743.481) [-9738.912] -- 0:00:04
+      98000 -- (-9748.577) [-9747.901] (-9740.505) (-9744.128) * (-9752.687) (-9750.028) [-9740.073] (-9744.115) -- 0:00:02
+      99000 -- (-9749.268) [-9748.505] (-9741.791) (-9749.556) * (-9756.576) (-9742.703) [-9745.426] (-9750.962) -- 0:00:01
+      100000 -- [-9742.323] (-9751.257) (-9746.708) (-9754.388) * (-9751.723) (-9741.862) (-9744.639) [-9743.592] -- 0:00:00
+
+      Average standard deviation of split frequencies: 0.005728
+
+      Analysis completed in 2 mins 24 seconds
+      Analysis used 143.67 seconds of CPU time
+      Likelihood of best state for "cold" chain of run 1 was -9734.69
+      Likelihood of best state for "cold" chain of run 2 was -9734.60
+
+      Acceptance rates for the moves in the "cold" chain of run 1:
+         With prob.   (last 100)   chain accepted proposals by move
+            24.6 %     ( 25 %)     Dirichlet(Revmat)
+            47.7 %     ( 53 %)     Slider(Revmat)
+             6.5 %     (  4 %)     Dirichlet(Pi)
+            18.0 %     ( 14 %)     Slider(Pi)
+            46.9 %     ( 49 %)     Multiplier(Alpha)
+            48.3 %     ( 32 %)     Slider(Pinvar)
+            17.1 %     ( 18 %)     ExtSPR(Tau,V)
+             8.9 %     (  9 %)     ExtTBR(Tau,V)
+            18.9 %     ( 16 %)     NNI(Tau,V)
+            22.5 %     ( 16 %)     ParsSPR(Tau,V)
+            28.7 %     ( 28 %)     Multiplier(V)
+            19.7 %     ( 22 %)     Nodeslider(V)
+            13.1 %     ( 16 %)     TLMultiplier(V)
+
+      Acceptance rates for the moves in the "cold" chain of run 2:
+         With prob.   (last 100)   chain accepted proposals by move
+            21.5 %     ( 17 %)     Dirichlet(Revmat)
+            46.4 %     ( 43 %)     Slider(Revmat)
+             8.2 %     (  6 %)     Dirichlet(Pi)
+            18.5 %     ( 21 %)     Slider(Pi)
+            47.9 %     ( 45 %)     Multiplier(Alpha)
+            49.0 %     ( 37 %)     Slider(Pinvar)
+            17.0 %     ( 17 %)     ExtSPR(Tau,V)
+             9.2 %     ( 10 %)     ExtTBR(Tau,V)
+            19.0 %     ( 14 %)     NNI(Tau,V)
+            22.8 %     ( 20 %)     ParsSPR(Tau,V)
+            27.9 %     ( 22 %)     Multiplier(V)
+            19.5 %     ( 22 %)     Nodeslider(V)
+            13.5 %     ( 18 %)     TLMultiplier(V)
+
+      Chain swap information for run 1:
+
+                  1      2      3      4 
+           ------------------------------
+         1 |          0.78   0.59   0.44 
+         2 |  16825          0.79   0.62 
+         3 |  16829  16749          0.79 
+         4 |  16347  16444  16806        
+
+      Chain swap information for run 2:
+
+                  1      2      3      4 
+           ------------------------------
+         1 |          0.76   0.57   0.43 
+         2 |  16612          0.77   0.59 
+         3 |  16619  16567          0.77 
+         4 |  16864  16505  16833        
+
+      Upper diagonal: Proportion of successful state exchanges between chains
+      Lower diagonal: Number of attempted state exchanges between chains
+
+      Chain information:
+
+        ID -- Heat 
+       -----------
+         1 -- 1.00  (cold chain)
+         2 -- 0.91 
+         3 -- 0.83 
+         4 -- 0.77 
+
+      Heat = 1 / (1 + T * (ID - 1))
+         (where T = 0.10 is the temperature and ID is the chain number)
+
+      Setting sumt conformat to Simple
+      Setting urn-in to 1000
+      Summarizing trees in files "input.nexus.compute.run1.t" and "input.nexus.compute.run2.t"
+      Using relative burnin ('relburnin=yes'), discarding the first 25 % of sampled trees
+      Writing statistics to files input.nexus.compute.<parts|tstat|vstat|trprobs|con>
+      Examining first file ...
+      Found one tree block in file "input.nexus.compute.run1.t" with 1001 trees in last block
+      Expecting the same number of trees in the last tree block of all files
+
+      Tree reading status:
+
+      0      10      20      30      40      50      60      70      80      90     100
+      v-------v-------v-------v-------v-------v-------v-------v-------v-------v-------v
+      *********************************************************************************
+
+      Read a total of 2002 trees in 2 files (sampling 1502 of them)
+         (Each file contained 1001 trees of which 751 were sampled)
+                                                                                   
+      General explanation:                                                          
+                                                                                   
+      In an unrooted tree, a taxon bipartition (split) is specified by removing a   
+      branch, thereby dividing the species into those to the left and those to the  
+      right of the branch. Here, taxa to one side of the removed branch are denoted 
+      '.' and those to the other side are denoted '*'. Specifically, the '.' symbol 
+      is used for the taxa on the same side as the outgroup.                        
+                                                                                   
+      In a rooted or clock tree, the tree is rooted using the model and not by      
+      reference to an outgroup. Each bipartition therefore corresponds to a clade,  
+      that is, a group that includes all the descendants of a particular branch in  
+      the tree.  Taxa that are included in each clade are denoted using '*', and    
+      taxa that are not included are denoted using the '.' symbol.                  
+                                                                                   
+      The output first includes a key to all the bipartitions with frequency larger 
+      or equual to (Minpartfreq) in at least one run. Minpartfreq is a parameter to 
+      sumt command and currently it is set to 0.10.  This is followed by a table  
+      with statistics for the informative bipartitions (those including at least    
+      two taxa), sorted from highest to lowest probability. For each bipartition,   
+      the table gives the number of times the partition or split was observed in all
+      runs (#obs) and the posterior probability of the bipartition (Probab.), which 
+      is the same as the split frequency. If several runs are summarized, this is   
+      followed by the minimum split frequency (Min(s)), the maximum frequency       
+      (Max(s)), and the standard deviation of frequencies (Stddev(s)) across runs.  
+      The latter value should approach 0 for all bipartitions as MCMC runs converge.
+                                                                                   
+      This is followed by a table summarizing branch lengths, node heights (if a    
+      clock model was used) and relaxed clock parameters (if a relaxed clock model  
+      was used). The mean, variance, and 95 % credible interval are given for each 
+      of these parameters. If several runs are summarized, the potential scale      
+      reduction factor (PSRF) is also given; it should approach 1 as runs converge. 
+      Node heights will take calibration points into account, if such points were   
+      used in the analysis.                                                         
+                                                                                    
+      Note that Stddev may be unreliable if the partition is not present in all     
+      runs (the last column indicates the number of runs that sampled the partition 
+      if more than one run is summarized). The PSRF is not calculated at all if     
+      the partition is not present in all runs.The PSRF is also sensitive to small  
+      sample sizes and it should only be considered a rough guide to convergence    
+      since some of the assumptions allowing one to interpret it as a true potential
+      scale reduction factor are violated in MrBayes.                               
+                                                                                    
+      List of taxa in bipartitions:                                                 
+                                                                                   
+         1 -- SUP35_Kla
+         2 -- SUP35_Agos
+         3 -- SUP35_Sc__
+         4 -- SUP35_Sbou
+         5 -- SUP35_Sc
+         6 -- SUP35_Spar
+         7 -- SUP35_Smik
+         8 -- SUP35_Sarb
+         9 -- SUP35_Skud
+        10 -- SUP35_Seub
+
+      Key to taxon bipartitions (saved to file "input.nexus.compute.parts"):
+
+      ID -- Partition
+      ----------------
+       1 -- .*********
+       2 -- .*........
+       3 -- ..*.......
+       4 -- ...*......
+       5 -- ....*.....
+       6 -- .....*....
+       7 -- ......*...
+       8 -- .......*..
+       9 -- ........*.
+      10 -- .........*
+      11 -- ..****....
+      12 -- ..*****...
+      13 -- ..********
+      14 -- ..***.....
+      15 -- .......*.*
+      16 -- ..*****.*.
+      17 -- ..**......
+      18 -- .......***
+      19 -- ..*.*.....
+      20 -- ...**.....
+      21 -- ..*******.
+      22 -- ..******.*
+      ----------------
+
+      Summary statistics for informative taxon bipartitions
+         (saved to file "input.nexus.compute.tstat"):
+
+      ID   #obs    Probab.     Sd(s)+      Min(s)      Max(s)   Nruns 
+      ----------------------------------------------------------------
+      11  1502    1.000000    0.000000    1.000000    1.000000    2
+      12  1502    1.000000    0.000000    1.000000    1.000000    2
+      13  1502    1.000000    0.000000    1.000000    1.000000    2
+      14  1502    1.000000    0.000000    1.000000    1.000000    2
+      15  1124    0.748336    0.001883    0.747004    0.749667    2
+      16   794    0.528628    0.018831    0.515313    0.541944    2
+      17   593    0.394807    0.006591    0.390146    0.399467    2
+      18   484    0.322237    0.009416    0.315579    0.328895    2
+      19   473    0.314913    0.014123    0.304927    0.324900    2
+      20   436    0.290280    0.007532    0.284953    0.295606    2
+      21   335    0.223036    0.000942    0.222370    0.223702    2
+      22   224    0.149134    0.009416    0.142477    0.155792    2
+      ----------------------------------------------------------------
+      + Convergence diagnostic (standard deviation of split frequencies)
+        should approach 0.0 as runs converge.
+
+
+      Summary statistics for branch and node parameters
+         (saved to file "input.nexus.compute.vstat"):
+
+                                              95% HPD Interval
+                                            --------------------
+      Parameter      Mean       Variance     Lower       Upper       Median     PSRF+  Nruns
+      --------------------------------------------------------------------------------------
+      length[1]     0.257729    0.001151    0.192718    0.322089    0.256306    1.002    2
+      length[2]     0.346256    0.001473    0.273227    0.420345    0.344426    1.004    2
+      length[3]     0.000955    0.000000    0.000044    0.002357    0.000781    1.000    2
+      length[4]     0.000915    0.000000    0.000009    0.002187    0.000748    1.002    2
+      length[5]     0.002427    0.000001    0.000489    0.004581    0.002253    0.999    2
+      length[6]     0.032498    0.000030    0.023240    0.044279    0.032209    1.001    2
+      length[7]     0.073888    0.000077    0.057661    0.090906    0.073501    1.000    2
+      length[8]     0.077644    0.000083    0.060048    0.095142    0.077470    0.999    2
+      length[9]     0.096861    0.000112    0.075596    0.116604    0.096703    1.002    2
+      length[10]    0.096581    0.000143    0.072273    0.118843    0.096897    1.002    2
+      length[11]    0.035764    0.000043    0.023134    0.048775    0.035437    1.003    2
+      length[12]    0.030621    0.000063    0.014363    0.045673    0.030798    1.000    2
+      length[13]    0.319856    0.001402    0.252569    0.395153    0.318548    1.000    2
+      length[14]    0.047128    0.000040    0.034766    0.058731    0.047002    1.000    2
+      length[15]    0.016027    0.000048    0.002807    0.029496    0.016106    1.005    2
+      length[16]    0.012757    0.000045    0.000956    0.024932    0.012279    0.999    2
+      length[17]    0.000681    0.000000    0.000001    0.001886    0.000483    1.000    2
+      length[18]    0.010045    0.000036    0.000534    0.021797    0.009291    1.000    2
+      length[19]    0.000554    0.000000    0.000001    0.001682    0.000371    0.998    2
+      length[20]    0.000541    0.000000    0.000001    0.001614    0.000398    0.998    2
+      length[21]    0.014530    0.000076    0.000038    0.031171    0.013191    1.015    2
+      length[22]    0.009789    0.000044    0.000065    0.022497    0.008902    1.026    2
+      --------------------------------------------------------------------------------------
+      + Convergence diagnostic (PSRF = Potential Scale Reduction Factor; Gelman
+        and Rubin, 1992) should approach 1.0 as runs converge. NA is reported when
+        deviation of parameter values within all runs is 0 or when a parameter
+        value (a branch length, for instance) is not sampled in all runs.
+
+
+      Summary statistics for partitions with frequency >= 0.10 in at least one run:
+          Average standard deviation of split frequencies = 0.005728
+          Maximum standard deviation of split frequencies = 0.018831
+          Average PSRF for parameter values (excluding NA and >10.0) = 1.002
+          Maximum PSRF for parameter values = 1.026
+
+
+      Clade credibility values:
+
+      /--------------------------------------------------------------- SUP35_Kla (1)
+      |                                                                               
+      |--------------------------------------------------------------- SUP35_Agos (2)
+      |                                                                               
+      |                                                    /---------- SUP35_Sc__ (3)
+      |                                                    |                          
+      |                                         /----100---+---------- SUP35_Sbou (4)
+      |                                         |          |                          
+      +                               /---100---+          \---------- SUP35_Sc (5)
+      |                               |         |                                     
+      |                    /----100---+         \--------------------- SUP35_Spar (6)
+      |                    |          |                                               
+      |          /----53---+          \------------------------------- SUP35_Smik (7)
+      |          |         |                                                          
+      |          |         \------------------------------------------ SUP35_Skud (9)
+      \----100---+                                                                    
+                 |                                         /---------- SUP35_Sarb (8)
+                 \--------------------75-------------------+                          
+                                                           \---------- SUP35_Seub (10)
+                                                                                      
+
+      Phylogram (based on average branch lengths):
+
+      /------------------------------------- SUP35_Kla (1)
+      |                                                                               
+      |-------------------------------------------------- SUP35_Agos (2)
+      |                                                                               
+      |                                                                / SUP35_Sc__ (3)
+      |                                                                |              
+      |                                                         /------+ SUP35_Sbou (4)
+      |                                                         |      |              
+      +                                                    /----+      \ SUP35_Sc (5)
+      |                                                    |    |                     
+      |                                               /----+    \----- SUP35_Spar (6)
+      |                                               |    |                          
+      |                                             /-+    \---------- SUP35_Smik (7)
+      |                                             | |                               
+      |                                             | \-------------- SUP35_Skud (9)
+      \---------------------------------------------+                                 
+                                                    |  /----------- SUP35_Sarb (8)
+                                                    \--+                              
+                                                       \-------------- SUP35_Seub (10)
+                                                                                      
+      |-------------| 0.100 expected changes per site
+
+      Calculating tree probabilities...
+
+      Credible sets of trees (15 trees sampled):
+         50 % credible set contains 5 trees
+         90 % credible set contains 11 trees
+         95 % credible set contains 12 trees
+         99 % credible set contains 14 trees
+
+   Exiting mrbayes block
+   Reached end of file
+
+   Tasks completed, exiting program because mode is noninteractive
+   To return control to the command line after completion of file processing, 
+   set mode to interactive with 'mb -i <filename>' (i is for interactive)
+   or use 'set mode=interactive'
+
