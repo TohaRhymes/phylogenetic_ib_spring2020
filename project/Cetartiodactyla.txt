@@ -1,0 +1,11 @@
++ Mysticeti (whale)
++ Orcinus orca (косатка)
++ Physeter catodon (кашалот)
++ Lagenorhynchus obliquidens (dolphin)
++ Ovis
++ Camelus
++ Vicugna pacos (alpaca)
++ Equus asinus (donkey)
++ Equus caballus (horse)
++ Ceratotherium simum(rhyno)
++ Mus Musсulus (аутгруппа)
